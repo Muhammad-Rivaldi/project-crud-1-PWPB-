@@ -1,6 +1,6 @@
 <?php
     include('koneksi.php');
-    
+    // membuat kode produk otomatis
     $kuery = $koneksi->prepare("SELECT MAX(`Kode Produk`) AS kode FROM `data_master`");
     $kuery->execute();
     $hasil = $kuery->fetch();
@@ -11,8 +11,9 @@
 
     $car="MD-";
     $kodeProduk = $car.sprintf("%03s",$kp);
-    // echo $kode
+    // echo $kode;
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,12 +24,14 @@
 <body>
     <!-- inputan -->
     <form name="input data" action="data_Masuk_db.php" method="POST">
-        <table border="1" cellpadding="10" cellspacing="0" style="margin: 50px auto">
+        <table border="0" cellpadding="10" cellspacing="0" style="margin: 50px auto">
             <tr>
-                <td colspan="2">FORM INPUT MASTER & STOK DATA BARANG</td>
+                <td colspan="2"><b>FORM INPUT MASTER & STOK DATA BARANG</b><br><hr></td>
+                
             </tr>
             <tr>
                 <td>kode produk</td>
+                <!-- di panggil $kodeProduk di bawah ini -->
                 <td><input type="text" name="kode" value="<?php echo $kodeProduk ?>" readonly></td>
             </tr>
             <tr>

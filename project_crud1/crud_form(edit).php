@@ -15,9 +15,9 @@
         
     <!-- inputan -->
     <form name="input data" action="editData.php" method="POST">
-        <table border="1" cellpadding="10" cellspacing="0" style="margin: 50px auto">
+        <table border="0" cellpadding="10" cellspacing="0" style="margin: 50px auto">
             <tr>
-                <td colspan="2"><b>FORM EDIT MASTER & STOK DATA BARANG</b></td>
+                <td colspan="2"><b>FORM EDIT MASTER & STOK DATA BARANG</b><br><hr></td>
             </tr>
             <tr>
                 <td>kode produk</td>

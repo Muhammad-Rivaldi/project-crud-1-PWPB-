@@ -21,8 +21,10 @@
             <td><?php echo $h['Kategori'];?></td>
             <td><img src="<?php echo $h['url gambar'];?>" width="100px"></td>
             <?php $stok = $h['stok awal']; echo ($h['stok awal'] < 5) ? "<td style='background:red; color:#fff'>$stok</td>" : "<td>$stok</td>"; ?>
-            <td><button style="background-color: red;"><a href="deleteData.php?kunci=<?php echo $h['Kode Produk'];?>" style="text-decoration: none;color: white">Hapus</a></button><br><br>
-            <button style="background-color: yellow"><a href="crud_form(edit).php?kunci=<?php echo $h['Kode Produk'];?>" style="text-decoration: none;color: black">edit</a></button>
+            <td>
+                <button style="background-color: red;"><a href="deleteData.php?kunci=<?php echo $h['Kode Produk'];?>" style="text-decoration: none;color: white">Hapus</a></button><br><br>
+                <button style="background-color: yellow"><a href="crud_form(edit).php?kunci=<?php echo $h['Kode Produk'];?>" style="text-decoration: none;color: black">edit</a></button>
+            </td>
         </tr>
     <?php } ?>    
 </table>
